@@ -1,0 +1,118 @@
+accessible: true
+author: 'Luka Chkoidze '
+categories: []
+contact_url: 'mailto : luka.chkoidze@student.uclouvain.be'
+context: |-
+    EPL organise un concours d'ingénieurs(es) dont les gagnants(es) seront envoyés à la NASA pour construire une fusée qui va atterir sur Mars.
+
+    On vous demande de créer un code (FILTRE.py) qui va évaluer les éléves avec leurs résultats et choisir les ingénieurs qui sont admis dans le concours
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        memory: '100'
+        time: '30'
+        hard_time: ''
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Concours
+network_grading: false
+problems:
+    Class_Participant:
+        header: |
+            Ecrivez le corps de la class Ingenieur (Liste chainée) qui contient une methode add, participants et __ str __
+
+            la classe ingenieurs retourne la liste des participants convertit en chaine de caractere
+
+            .. code-block:: python
+
+                class Ingenieurs:
+                """
+                Liste chainée contenant les participants dans l'ordre
+                """
+                    class Node:
+                        def __init__(self, data, next=None):
+                            self.data = data
+                            self.next = next
+
+                    def __init__(self):
+                        self.head = None
+                        self.last = None
+                        self.length = 0
+
+                    def add(self, data):
+                        """ Ajoute le participant dans la liste chainée en respectant l'ordre
+                        Arg : 'data' est un objet de la classe Participant
+                        Return : None
+                        """
+
+                    def participants(self):
+                        """
+                        Args : -
+                        Return : Liste des objets Participants dans l'ordre par rapport aux resultats
+                        """
+
+                    def __str__(self):
+                        """
+                        Affiche les éléments de la liste chainée
+                        """
+
+            Ecrivez le corps de la class Participant qui contient comme donées le prénom, nom, matricule, resultat et une methode __ ge __ pour comparer un participant a l'autre par rapport à son résultat
+
+
+            .. code-block:: python
+
+                class Participant:
+                    """
+                    Args:   'prenom' spécifie un str,
+                            'nom' spécifie un str,
+                            'matricule' spécifie un int,
+                            'resultat' spécifie un int,
+                    Return: None
+                    """
+
+            Ecrivez la fonction admis qui retourne et filtre les participants retournés par la classe Ingenieur (méthode participants) en supposant que la note doit etre supérieur à 10 et les nombre de personnes admis ne doit pas dépasser 12
+
+            .. code-block:: python
+
+                def admis(participants):
+                    """
+                    Args: 'participants' est une liste contenants les objets participants dans l'ordre par rapport aux resultats
+                    en format "numéro) prenom nom matricule resultat"
+                    Return : None
+                    """
+
+            Ecrivez une fonction statistique qui retourne le pourcentage de participants admis par rapport aux participants au total
+            Utilisez la fonction admis
+
+            .. code-block:: python
+
+                def statistique(participants):
+                    """
+                    Args : participants spécifie les objets participants dans l'ordre
+                    Return: retourne le pourcentage d'étudiant admis
+                    (nombre total d'étudiants admis * nombre total d'étudiants ayant composé)*100
+                    """
+        type: code
+        default: |-
+            class Participant:
+                # votre code
+
+            class Ingenieurs:
+                # votre code
+
+            def admis(participants):
+                # votre code
+
+            def statistique():
+                # votre code
+        language: python
+        name: FILTRE.py
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
