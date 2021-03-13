@@ -4,7 +4,7 @@
 # P1_1A_6 Modifications
 
 ## Concours
-...
+Les modifications effectuées à l'aide des review sont seulement les fautes d'orthographes
 ## Combat_Royal
 ...
 ## La_Course
