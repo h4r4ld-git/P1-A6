@@ -1,0 +1,89 @@
+accessible: true
+author: Ahdidouch Ismail
+categories: []
+contact_url: ismailahdidouch@student.uclouvain.be
+context: |
+    Université Catholique de Louvain a organisé une course pour les étudiants de l'UCLouvain. Et pour les encourager à participer  à cette course ils ont décidé de fournir une récompense de 100 Euros jusqu'à 1000 Euros pour Les étudiants gagnants
+    dans la course;
+
+        -Les étudiants qui feront la course entre [0(min), 5(min)] seront en première place et auront une récompense de 1000 Euros.
+
+        -Les gagnants qui feront la course entre ]5(min), 10(min)[, seront en deuxième place et auront une récompense de 500 Euros.
+
+        -Les gagnants qui feront la course entre ]10(min), 15(min)[, seront en troisième place et auront une récompense de 100 Euros.
+
+        -Pour le reste seront considérés comme des perdants.
+
+    L'UCLouvain fait appel à vous dans le cadre de la création d'une fonction "La_course" qui gérait les étudiants gagnants, et qui contient comme argument un fichier qui contient dans chaque ligne des noms des étudiants participant à la course et leur temps qui ont passés pendant la course sous forme "Nom : Le temps passé pendant la course en minute"
+
+    La fonction "La_course" doit retourner un dictionnaire qui respecte bien les spécifications suivantes:
+        -Qui contient comme clés les trois premières places gagnantes dans la course dans un ordre croissant (1, 2, 3) et chaque clé contient comme valeur une liste des participants gagnante; les participants qui sont dans l'intervalle [0(minute),5(minutes)] seront en première place, les participant qui sont dans l'intervalle ]5(min), 10(min)] seront en deuxième place et les participants qui sont dans l'intervalle ]10(min), 15(min)] seront en troisième place.
+
+         -Dans lesquels les participants doivent respecter la forme suivante: "Le nom de participant :Durée pendant la course en minute", et ignorez tous les autres formats comme "Ismail?12", "10:Luka", "Sacha?4"...
+
+         -Qui ne contient pas des clés où ses valeurs sont des listes vides par exemple s'il n'y a pas de participants qui ont fait la course entre ]5(min), 10(min)], il faut retourner un dictionnaire sans la deuxième place, comme:  "{1: ['timssah'], 3:['Said']}"
+
+         -Où les participants gagnants sont classés par ordres croissant selon le temps qu'ils ont passé pendant la course.
+
+    Note: Dans le fichier "filename" (filename est l'argument de la fonction "La_course"), Nous ne pouvons pas trouver deux participants où ils ont fait la même durée pendant la course.
+
+    Vous pouvez utiliser d'autres fonctions pour simplifier votre code ;)
+
+    Bon Courage!!
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        memory: '100'
+        time: '30'
+        hard_time: ''
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: La_Course
+network_grading: false
+problems:
+    course:
+        type: code
+        name: La course
+        default: |-
+            def La_course(filename):
+                """
+                pre: filename est un fichier contient dans chaque ligne
+                     un participant et sa durée pendant la course au format
+                     suivant: "Le nom : Durée pendant la course en minutes"
+
+                post:
+                     * Retourne un dictionnaire:
+                        -Qui contient comme clées les trois premières places
+                         gagnantes dans la course dans un ordre croissant
+                         (1, 2, 3) et chaque clé contient comme valeur une liste
+                         des participants gagnants; les participants qui sont
+                         dans l'intervalle [0(minute),5(minutes)] seront en
+                         première place, les participants qui sont dans l'intervalle
+                         ]5(min), 10(min)] seront en deuxième et les participants qui sont dans
+                         l'intervalle ]10(min), 15(min)] seront en troisième place.
+
+                       -Dans lesquels les participants doivent respecter la forme
+                        suivant: "Le nom de participant : miniutes", et ignorez
+                        tous les autres formats comme "Ismail?12", "10:Luka", "Sacha?4"...
+
+                       -Qui ne contient pas des clées où ses valeur sont des listes vides
+                        par exemple si on a pas des participant qui ont fait la course
+                        entre ]5(min), 10(min)], il faut retouner un dictionnaire sans
+                        la deuxième place, comme:  "{1: ['timssah'], 3:['Said']}"
+
+                       -Où les participants gagnants sont classée par ordre croissant
+                        selon le temps qu'ils ont passés pendant la course
+
+                """
+                #votre code
+        language: python
+        header: Ecrivez un code
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

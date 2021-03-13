@@ -1,0 +1,68 @@
+accessible: true
+author: Patrick Junior Ebona noah
+categories: []
+contact_url: patrick.ebonanoah@student.uclouvain.be
+context: 'Une entreprise fait appel à vous dans le cadre de la création de leur nouveau
+    jeu Combat Royale.Le principe est très simple il sera question pour vous d''implementer
+    un programme python permettant à chaque joueur de créer un personnage pour jouer.
+    Les personnages du jeu: Le premier personnage que les joueurs peuvent créer est
+    le combattant.Pour ce fait chaque combattant se définit premièrement par son nom
+    (unique),deuxièmement par ses points de vie,troisièmement ses points d''attaque
+    et enfin chaque personnage possède une methode d''attaque qui lui premet de combattre.Le
+    second personnage auquel il faudra donner vie est un  Chevalier héritant des caractéristiques  d''un
+    combattant mais  possedant en plus une nouvelle capacité la guérison.Enfin le
+    troisième personnage est un Magicien capable de lancer des sorts à ses adversaires
+    héritant également des caractéristiques d''un combattant.'
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        memory: '100'
+        time: '30'
+        hard_time: ''
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Combat_Royal
+network_grading: false
+problems:
+    classCombattant:
+        language: python
+        type: code
+        name: Class_Combat Royale
+        header: |
+            Implementez uniquement les corps des classes  et des  methodes.
+        default: |+
+            class Combattant:
+                #Implementez le corps de la classe combattant.
+                def frapper(self,adversaire):
+                    """ pré : vérifier qu'on ne se frappe pas soi-même.
+                        post :  l'adversaire perd des points de vie équivalent aux points d'attaque de l'autre.
+                    """
+
+
+            class Chevalier(Combattant):
+                #Implementez le corps de la classe  Chevalier.
+
+                def guerison (self, points):
+                    """pré -
+                       post: Augmente les points de vie du personnage du nombre passé en paramètre, attention  le seuil des  points de vie est fixé à 100.
+                    """
+
+            class Magicien(Combattant):
+                #Implementez le corps de la classe  Magicien.
+
+                def sort(self,adversaire):
+                    """ pré: vérifier que l'on ne se jette pas un sort pas soi-même.
+                        post: l' adversaire est detruit directement par le sort et ses points de vie sont ramener à 0.
+                    """
+
+
+
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

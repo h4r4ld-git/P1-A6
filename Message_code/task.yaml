@@ -1,0 +1,50 @@
+accessible: true
+author: Sacha de Menten de Horne
+categories: []
+contact_url: 'mail to: sacha.dementen@student.uclouvain.be'
+context: 'Bienvenue dans ce nouvel exercice '
+environment_id: pyjavacpp
+environment_parameters:
+    limits:
+        memory: '100'
+        time: '30'
+        hard_time: ''
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: MessageCode
+network_grading: false
+problems:
+    Fonction_message_code:
+        default: |-
+            def message(chaine,mode):
+                """
+                pre
+                :param chaine: une chaine de charactère de type string
+                :param mode: un charactère string "c" (crypter) ou "d" (décripter)
+                                             pour déterminer quel mode est choisi
+                post : retourne une chaine de charactere string remplissant les conditions suivantes :
+                    - chaque lettre a été remplacée par la lettre se trouvant deux places
+                       vers la gauche dans l'alphabet (C=A)
+                    - les lettres spéciales telles que é, à, è sont considérées comme des lettres normales avant           d'ếtre remplaçée
+                    - les chiffres restent inchangés et les espaces sont ignorés
+                """
+        type: code
+        name: fonction_principale
+        header: |
+            Un groupe d'étudiants souhaite pouvoir communiquer sur leur chat teams sans être compris par leur titulaire.
+
+            Pour cela ils décident d’écrire en message codé de la manière suivante : chaque lettre est décalée de deux lettres vers la gauche dans l’alphabet.
+
+            Ils décident également de créer un programme leur permettant de coder et décoder leur message respectant les consignes suivantes : la lettre B décalée de deux lettres vers la gauche donne la lettre Z, les caractères spéciaux tels que é,à,è,ô,etc sont considérés comme de simples lettres, les majuscules et minuscules doivent etre cryptée/décryptée en gardant leur forme et les espaces et chiffres restent inchangés.
+
+            Vous devez donc implémenter la fonction message() prenant en compte une chaîne de caractère et le mode de fonctionnement voulu comme arguments (crypter/decrypter), cette fonction renvoie cette chaîne correctement cryptée/décryptée.
+        language: python
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
